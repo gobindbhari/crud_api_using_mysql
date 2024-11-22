@@ -5,13 +5,11 @@ const Temp = require('./tempModel');
 const User = require('./userModel');
 
 
-dotenv.config()
+sequelize.sync({force:false})
 
-sequelize.sync({force:true}).then(() => {
-    console.log("Db synced")
-}).catch((e) => {
-    console.log(e)
-})
+User.belongsTo(Temp, {foreignKey:"id"})
+Temp.hasMany(User,{foreignKey:"id"})
+
 try {
     sequelize.authenticate();
     console.log('Connection has been established successfully.');

@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes } = require('sequelize')
+const { DataTypes } = require('sequelize')
 const sequelize = require('../config/connection');
 
 
@@ -7,11 +7,11 @@ const User = sequelize.define(     // format .define(modelName, attributes, opti
 
     {           //  Model attributes define here
 
-        firstName: {
+        firstname: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        lastName: {
+        lastname: {
             type: DataTypes.STRING,
             // allowNull defaults to true
         },

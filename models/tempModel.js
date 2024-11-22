@@ -6,11 +6,11 @@ const sequelize = require('../config/connection');
 const Temp =  sequelize.define(
     'Temp',
     {
-        firstName: {
+        firstname: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        lastName: {
+        lastname: {
             type: DataTypes.STRING,
             // allowNull defaults to true
         },
